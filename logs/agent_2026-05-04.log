@@ -1,0 +1,76 @@
+2026-05-04 01:08:10,932 - agent - ERROR - vector_store.py:99  - [加载知识库]F:\LangChain\Agent_project\data\尺码推荐.txt加载失败：Error loading F:\LangChain\Agent_project\data\尺码推荐.txt
+Traceback (most recent call last):
+  File "F:\LangChain\Agent_project\venv\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "F:\LangChain\Agent_project\rag\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "F:\LangChain\Agent_project\rag\vector_store.py", line 57, in get_file_documents
+    return txt_loader(read_path)
+  File "F:\LangChain\Agent_project\utils\file_handler.py", line 53, in txt_loader
+    return TextLoader(file_path).load()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "F:\LangChain\Agent_project\venv\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "F:\LangChain\Agent_project\venv\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading F:\LangChain\Agent_project\data\尺码推荐.txt
+2026-05-04 01:08:10,941 - agent - ERROR - vector_store.py:99  - [加载知识库]F:\LangChain\Agent_project\data\洗涤养护.txt加载失败：Error loading F:\LangChain\Agent_project\data\洗涤养护.txt
+Traceback (most recent call last):
+  File "F:\LangChain\Agent_project\venv\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0x80 in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "F:\LangChain\Agent_project\rag\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "F:\LangChain\Agent_project\rag\vector_store.py", line 57, in get_file_documents
+    return txt_loader(read_path)
+  File "F:\LangChain\Agent_project\utils\file_handler.py", line 53, in txt_loader
+    return TextLoader(file_path).load()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "F:\LangChain\Agent_project\venv\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "F:\LangChain\Agent_project\venv\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading F:\LangChain\Agent_project\data\洗涤养护.txt
+2026-05-04 01:08:10,949 - agent - ERROR - vector_store.py:99  - [加载知识库]F:\LangChain\Agent_project\data\颜色选择.txt加载失败：Error loading F:\LangChain\Agent_project\data\颜色选择.txt
+Traceback (most recent call last):
+  File "F:\LangChain\Agent_project\venv\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xa2 in position 20: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "F:\LangChain\Agent_project\rag\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "F:\LangChain\Agent_project\rag\vector_store.py", line 57, in get_file_documents
+    return txt_loader(read_path)
+  File "F:\LangChain\Agent_project\utils\file_handler.py", line 53, in txt_loader
+    return TextLoader(file_path).load()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "F:\LangChain\Agent_project\venv\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "F:\LangChain\Agent_project\venv\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading F:\LangChain\Agent_project\data\颜色选择.txt
+2026-05-04 01:09:36,328 - agent - INFO - vector_store.py:96  - [加载知识库]F:\LangChain\Agent_project\data\尺码推荐.txt 内容加载成功
+2026-05-04 01:09:37,530 - agent - INFO - vector_store.py:96  - [加载知识库]F:\LangChain\Agent_project\data\洗涤养护.txt 内容加载成功
+2026-05-04 01:09:38,139 - agent - INFO - vector_store.py:96  - [加载知识库]F:\LangChain\Agent_project\data\颜色选择.txt 内容加载成功
+2026-05-04 01:46:15,894 - agent - ERROR - prompt_loader.py:24  - [load_rag_prompts]在yaml配置项中没有rag_summarize_prompt_path配置项
+2026-05-04 01:48:59,829 - agent - INFO - middleware.py:40  - [log_before_model]即将调用模型，带有1条消息。
+2026-05-04 01:49:13,751 - agent - INFO - middleware.py:40  - [log_before_model]即将调用模型，带有1条消息。
+2026-05-04 01:49:15,491 - agent - INFO - middleware.py:19  - [tool monitor]执行工具：rag_summarize
+2026-05-04 01:49:15,491 - agent - INFO - middleware.py:20  - [tool monitor]传入参数：{'query': '便宜的扫地机器人选购指南'}
+2026-05-04 01:49:18,996 - agent - INFO - middleware.py:24  - [tool monitor]工具rag_summarize调用成功
+2026-05-04 01:49:20,010 - agent - INFO - middleware.py:40  - [log_before_model]即将调用模型，带有3条消息。
